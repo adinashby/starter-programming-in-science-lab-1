@@ -7,7 +7,7 @@ import sys
 from Lab1 import hello_world, input_output
 
 # Test case for hello_world() function
-def test_hello_world(self):
+def test_hello_world():
     # Since hello_world() just prints, we can check if the correct output is printed.
     captured_output = StringIO()
     sys.stdout = captured_output
@@ -15,13 +15,13 @@ def test_hello_world(self):
     hello_world()
 
     # Check if the correct message was printed
-    self.assertEqual(captured_output.getvalue().strip(), "Hello, World!")
+    assert captured_output.getvalue().strip() == "Hello, World!"
 
     # Reset stdout
     sys.stdout = sys.__stdout__
 
     # Test case for input_output() function
-def test_input_output(self):
+def test_input_output():
     # Sample user inputs for testing
     user_inputs = ["Alice", "25", "5.7"]
 
@@ -43,7 +43,7 @@ def test_input_output(self):
     expected_output = "Hello, Alice!\nYou are 25 years old.\nYour height is 5.7 meters."
 
     # Compare the captured output to the expected output
-    self.assertEqual(actual_output, expected_output)
+    assert actual_output == expected_output
 
     # Reset stdin and stdout
     sys.stdin = sys.__stdin__
