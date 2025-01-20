@@ -1,3 +1,4 @@
+# Make sure you are not modifying the method signatures
 # Function 1: Write a simple Hello World program
 # This function should print "Hello, World!" to the screen.
 def hello_world():
